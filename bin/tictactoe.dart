@@ -32,6 +32,7 @@ String tabuleiro = '''
 |               |         |               |
 |      ---------|---------|---------      |
 +-=--=--=--=--=--=--=--=--=--=--=--=--=--=+
+| Esta é uma modificação do João
 ''';
 String rodape = '''
 |(0) $nome1:$caracter1                               
