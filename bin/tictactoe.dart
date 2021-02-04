@@ -32,7 +32,6 @@ String tabuleiro = '''
 |               |         |               |
 |      ---------|---------|---------      |
 +-=--=--=--=--=--=--=--=--=--=--=--=--=--=+
-| Esta é uma modificação do João
 ''';
 String rodape = '''
 |(0) $nome1:$caracter1                               
@@ -133,17 +132,17 @@ void main() {
 
     if (escolhaConvertida != null &&
         (escolhaConvertida < 10 && escolhaConvertida > 0)) {
-      bool valido = jogada(caracterJogando: caracterAtual, numero: escolhaConvertida);
+      bool valido =
+          jogada(caracterJogando: caracterAtual, numero: escolhaConvertida);
       if (valido == true) {
         verificaGanhador(jogadorAgr: jogador);
 
-      if (temosVencedor == false) {
-        verificaVelha();
-        alternarJogada = !alternarJogada;
-        alternarJogador = !alternarJogador;
+        if (temosVencedor == false) {
+          verificaVelha();
+          alternarJogada = !alternarJogada;
+          alternarJogador = !alternarJogador;
+        }
       }
-      }
-      
     } else {
       print("+-=--=--=--=--=--=--=--=--=--=--=--=--=--=+");
       print("SEU ANIMAL COLOCA A POHA DO BGLHO CERTO!!!!");
@@ -160,92 +159,93 @@ bool jogada({int numero, String caracterJogando}) {
         matriz[0][0] = caracterJogando;
         tabuleiro = tabuleiro.replaceAll("1", caracterJogando);
         return true;
-      }else{
+      } else {
         return false;
       }
       break;
 
     case 2:
-    if (matriz[0][1] != caracter1 && matriz[0][1] != caracter2){
-      matriz[0][1] = caracterJogando;
-      tabuleiro = tabuleiro.replaceAll("2", caracterJogando);
-      return true;
-    }else{
-      return false;
-    }
-    break;
+      if (matriz[0][1] != caracter1 && matriz[0][1] != caracter2) {
+        matriz[0][1] = caracterJogando;
+        tabuleiro = tabuleiro.replaceAll("2", caracterJogando);
+        return true;
+      } else {
+        return false;
+      }
+      break;
 
     case 3:
-    if (matriz[0][2] != caracter1 && matriz[0][2] != caracter2){
-      matriz[0][2] = caracterJogando;
-      tabuleiro = tabuleiro.replaceAll("3", caracterJogando);
+      if (matriz[0][2] != caracter1 && matriz[0][2] != caracter2) {
+        matriz[0][2] = caracterJogando;
+        tabuleiro = tabuleiro.replaceAll("3", caracterJogando);
         return true;
-    }else{
-      return false;
-    }
-    break;
+      } else {
+        return false;
+      }
+      break;
 
     case 4:
-    if (matriz[1][0] != caracter1 && matriz[1][0] != caracter2){
-      matriz[1][0] = caracterJogando;
-      tabuleiro = tabuleiro.replaceAll("4", caracterJogando);
-       return true;
-    }else{
-      return false;
-    }
-    break;
+      if (matriz[1][0] != caracter1 && matriz[1][0] != caracter2) {
+        matriz[1][0] = caracterJogando;
+        tabuleiro = tabuleiro.replaceAll("4", caracterJogando);
+        return true;
+      } else {
+        return false;
+      }
+      break;
 
     case 5:
-    if (matriz[1][1] != caracter1 && matriz[1][1] != caracter2){
-      matriz[1][1] = caracterJogando;
-      tabuleiro = tabuleiro.replaceAll("5", caracterJogando);
-         return true;
-    }else{
-      return false;
-    }
-    break;
+      if (matriz[1][1] != caracter1 && matriz[1][1] != caracter2) {
+        matriz[1][1] = caracterJogando;
+        tabuleiro = tabuleiro.replaceAll("5", caracterJogando);
+        return true;
+      } else {
+        return false;
+      }
+      break;
 
     case 6:
-    if (matriz[1][2] != caracter1 && matriz[1][2] != caracter2){
-      matriz[1][2] = caracterJogando;
-      tabuleiro = tabuleiro.replaceAll("6", caracterJogando);
-         return true;
-    }else{
-      return false;
-    }
-    break;
+      if (matriz[1][2] != caracter1 && matriz[1][2] != caracter2) {
+        matriz[1][2] = caracterJogando;
+        tabuleiro = tabuleiro.replaceAll("6", caracterJogando);
+        return true;
+      } else {
+        return false;
+      }
+      break;
 
     case 7:
-    if (matriz[2][0] != caracter1 && matriz[2][0] != caracter2){
-      matriz[2][0] = caracterJogando;
-      tabuleiro = tabuleiro.replaceAll("7", caracterJogando);
-         return true;
-    }else{
-      return false;
-    }
-    break;
+      if (matriz[2][0] != caracter1 && matriz[2][0] != caracter2) {
+        matriz[2][0] = caracterJogando;
+        tabuleiro = tabuleiro.replaceAll("7", caracterJogando);
+        return true;
+      } else {
+        return false;
+      }
+      break;
 
     case 8:
-    if (matriz[2][1] != caracter1 && matriz[2][1] != caracter2){
-      matriz[2][1] = caracterJogando;
-      tabuleiro = tabuleiro.replaceAll("8", caracterJogando);
-         return true;
-    }else{
-      return false;
-    }
-    break;
+      if (matriz[2][1] != caracter1 && matriz[2][1] != caracter2) {
+        matriz[2][1] = caracterJogando;
+        tabuleiro = tabuleiro.replaceAll("8", caracterJogando);
+        return true;
+      } else {
+        return false;
+      }
+      break;
 
     case 9:
-    if (matriz[2][2] != caracter1 && matriz[2][2] != caracter2){
-      matriz[2][2] = caracterJogando;
-      tabuleiro = tabuleiro.replaceAll("9", caracterJogando);
-         return true;
-    }else{
-      return false;
-    }
-    break;
+      if (matriz[2][2] != caracter1 && matriz[2][2] != caracter2) {
+        matriz[2][2] = caracterJogando;
+        tabuleiro = tabuleiro.replaceAll("9", caracterJogando);
+        return true;
+      } else {
+        return false;
+      }
+      break;
 
     default:
+      return false;
       break;
   }
 }
